@@ -121,7 +121,7 @@ E --> F[输出助记词明文]
 ### 🔐 加密命令
 
 ```bash
-python mnemonic_encryptor.py --mode encrypt [--use-totp]
+python mnemonic_encryptor.py --mode encrypt 
 ```
 
 系统将提示输入助记词与密码，然后输出加密文件（默认：`mnemonic.enc.json`）
@@ -131,7 +131,7 @@ python mnemonic_encryptor.py --mode encrypt [--use-totp]
 ### 🔓 解密命令
 
 ```bash
-python mnemonic_encryptor.py --mode decrypt --input mnemonic.enc.json [--use-totp]
+python mnemonic_encryptor.py --mode decrypt --input mnemonic.enc.json 
 ```
 
 输入密码后，输出原始助记词。
