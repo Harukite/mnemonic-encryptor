@@ -1,6 +1,4 @@
-当然可以，以下是将 **助记词数据的加密与解密**完整整理成的流程指南，适用于本地安全保存钱包助记词，例如 MetaMask、硬件钱包助记词（如 Ledger、Trezor）的备份需求。
 
----
 
 # 🛡️ 助记词数据加密 & 解密完整流程指南（基于 BIP39 + AES-256 + PBKDF2 + TOTP 动态码认证）
 
@@ -148,7 +146,7 @@ python mnemonic_encryptor.py --mode decrypt --input mnemonic.enc.json
 ---
 
 
-## 🖥️ 第六步：打包为 Windows 应用（.exe）
+## 🖥️ 第六步：打包为应用（.exe/.pkg）
 
 ### 1. 安装 PyInstaller
 
@@ -161,14 +159,12 @@ pip install pyinstaller
 
 在脚本所在目录下执行：
 ```bash
-pyinstaller --onefile mnemonic_encryptor.py
+pyinstaller mnemonic_encryptor.spec
 ```
-- `--onefile`：打包成单一的 .exe 文件
-- 如果你希望运行时不弹出命令行窗口（适合做成 GUI），可加 `--noconsole` 参数
 
 ### 3. 打包结果
 
-- 打包完成后，在 `dist` 文件夹下会生成 `mnemonic_encryptor.exe`
+- 打包完成后，在 `dist` 文件夹下会生成 `mnemonic.exe`
 - 你可以将该文件拷贝到任意 Windows 电脑运行，无需 Python 环境
 
 ### 4. 常见问题
