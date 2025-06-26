@@ -2,11 +2,11 @@
 
 
 a = Analysis(
-    ['mnemonic_encryptor.py'],
+    ['mnemonic_gui.py'],
     pathex=[],
     binaries=[],
     datas=[],
-    hiddenimports=[],
+    hiddenimports=['cryptography', 'pyotp', 'qrcode', 'PIL', 'tkinter'],
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
@@ -29,7 +29,7 @@ exe = EXE(
     upx=True,
     upx_exclude=[],
     runtime_tmpdir=None,
-    console=True,
+    console=False,
     disable_windowed_traceback=False,
     argv_emulation=False,
     target_arch=None,
